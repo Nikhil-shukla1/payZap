@@ -15,8 +15,8 @@ app.use(bodyParser.json());
 app.use("/api/v1", apiRouter);
 
 //testing home
-app.get('/',(res,req)=>{
-  res.send('Hi from the home')
+app.get('/',(req,res)=>{
+  return res.json({meessage: "Hi from the home"});
 })
 
 const PORT = 3000;
